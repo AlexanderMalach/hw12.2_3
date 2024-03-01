@@ -6,6 +6,7 @@ class TestArrs(unittest.TestCase):
 
     def test_get(self):
         self.assertEqual(arrs.get([1, 2, 3], 1), 2)
+        self.assertEqual(arrs.get([1, 2, 3], 1, "test"), 2)
         self.assertEqual(arrs.get([], 0, "test"), "test")
         self.assertIsNone(arrs.get([], 0))
         self.assertEqual(arrs.get([1, 2, 3], 5, "test"), "test")
